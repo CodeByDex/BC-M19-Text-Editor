@@ -1,7 +1,6 @@
 import { Workbox } from 'workbox-window';
-//TODO
-//import Editor from './editor';
-//import './database';
+import Editor from './editor';
+import './database';
 import '../css/style.css';
 
 const main = document.querySelector('#main');
@@ -18,12 +17,11 @@ const loadSpinner = () => {
   main.appendChild(spinner);
 };
 
-//TODO
-// const editor = new Editor();
+const editor = new Editor();
 
-// if (typeof editor === 'undefined') {
-//   loadSpinner();
-// }
+if (typeof editor === 'undefined') {
+  loadSpinner();
+}
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
